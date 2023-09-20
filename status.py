@@ -19,7 +19,7 @@ def get_status():
     print("Users:")
     for user in users:
         if user in status and status[user] < 0:
-            print (f"{user} : {status[user]}")
+            print (f"{user} owes {status[user]}€ to someone")
         else:
             print(f"{user} owes nothing")
     return
