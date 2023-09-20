@@ -17,6 +17,9 @@ def get_status():
             status[person] -= float(amount)/len(people.split(","))
         status[spender] += float(amount) - float(amount)/len(people.split(","))
     print("Users:")
-    for user in status:
-        print(f"{user} : {status[user]}")
+    for user in users:
+        if user in status and status[user] < 0:
+            print (f"{user} : {status[user]}")
+        else:
+            print(f"{user} owes nothing")
     return
